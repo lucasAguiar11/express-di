@@ -1,0 +1,12 @@
+node_modules
+logs
+.idea
+vscode
+
+dist
+
+*.log
+
+.env
+.env.production
+.env.development
