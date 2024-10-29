@@ -1,3 +1,4 @@
 export class CreateTransactionDto {
-  amount: number
-}
+    amount: number
+  }
+  

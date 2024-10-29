@@ -5,6 +5,7 @@ import { TransactionDto } from '../dtos/transaction/transaction.dto'
 import { UseCase } from './use-case.interface'
 import { ITransactionRepository } from '@/domain/repository/transaction.repository'
 import { TransactionEntity } from '@/domain/entities/transaction.entity'
+import { AES256CBC } from '@lib/encrypt'
 
 @injectable()
 export class CreateTransactionUseCase
@@ -25,6 +26,9 @@ export class CreateTransactionUseCase
     )
 
     console.log('CreateTransactionUseCase -> transaction', transaction)
+    const aes = new AES256CBC('0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef')
+    const encrypted = aes.encrypt(JSON.stringify(transaction))
+    console.log('CreateTransactionUseCase -> encrypted', encrypted)
 
     return {
       success: true,

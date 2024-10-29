@@ -1,3 +1,3 @@
 export class TransactionDto {
-  nsu: string
+  nsu: string;
 }
