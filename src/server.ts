@@ -1,5 +1,5 @@
 import 'reflect-metadata'
-import '@/infrastructure/dy'
+import '@/infrastructure/di'
 import express from 'express'
 
 import route from './infrastructure/routes/transaction.route'
